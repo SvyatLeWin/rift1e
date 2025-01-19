@@ -9,7 +9,7 @@ export default class rift1eItemSHeet extends ItemSheet{
             editable:this.isEditable,
             item:baseData.item,
             data:baseData.item.data.data,
-            data.config=CONFIG.rift1e
+            config=CONFIG.rift1e
         };
         return sheetData;
     }
