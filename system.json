@@ -30,7 +30,7 @@
     "gridunits": "м",
     "primaryTokenAttribute":"pta",
     "initiative": "@Perception",
-    "url": "https://github.com/SvyatLeWin/RiftE.git",
-    "manifest": "https://github.com/SvyatLeWin/RiftE/blob/main/system.json"
+    "url": "https://github.com/SvyatLeWin/rift1e",
+    "manifest": "https://github.com/SvyatLeWin/rift1e/blob/main/system.json"
 
 }
