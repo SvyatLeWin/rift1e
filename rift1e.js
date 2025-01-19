@@ -1,5 +1,5 @@
 import { rift1e } from "./module/config";
-import rift1eItemSHeet from "./module/sheets/rift1eItemSheet";
+import rift1eItemSHeet from "./module/sheets/rift1eItemSheet.js";
 
 Hooks.once("init", function(){
     console.log("rift1e | Initialising Rift system");
