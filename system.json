@@ -18,12 +18,12 @@
         {
             "lang":"en",
             "name":"English",
-            "path":"lang.en.json"
+            "path":"lang/en.json"
         },
         {
             "lang":"ru",
             "name":"Русский",
-            "path":"lang.ru.json"
+            "path":"lang/ru.json"
         }
     ],
     "socket": false,
