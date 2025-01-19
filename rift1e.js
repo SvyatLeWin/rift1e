@@ -12,8 +12,5 @@ Hooks.once("init", function(){
     CONFIG.Item.documentClass = rift1eItem;
     CONFIG.Actor.documentClass = rift1eActor;
     Items.unregisterSheet("core",ItemSheet);
-    Items.registerSheet("rift1e",rift1eItemSHeet,{ 
-        makeDefault: true,
-        label:"rift1e.SheetLabels.Item"
-    });
+    Items.registerSheet("rift1e",rift1eItemSHeet,{makeDefault: true});
 });
