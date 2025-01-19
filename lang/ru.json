@@ -1,0 +1,33 @@
+{
+    "rift1e": {
+        "attack":{
+            "none":"",
+            "fencing":"Фехтование",
+            "shooting":"Стрельба",
+            "aesperForce":"Эсперная сила"
+        },
+        "weapon":{
+            "attackWith":"Атаковать с помощью",
+            "damage":"Урон",
+            "distance":"Дистанция",
+            "weight":"Тип",
+            "convinience":"Удобное",
+            "apiercing":"Бронебойность",
+            "flexibility":"Полуторное",
+            "power":"Силовое",
+            "bulky":"Громоздкое",
+            "fatal":"Фатальное",
+            "swing":"Размах",
+            "alternative":"Альтернативно",
+            "reload":"Перезарядка",
+            "bolt":"Затвор",
+            "magazine":"Магазин",
+            "contact":"Контактное",
+            "reliable":"Надежное",
+            "throwing":"Метательное",
+            "stationary":"Стационарное",
+            "scratch":"Царапина",
+            "assault":"Штурмовое"
+        }
+    }
+}

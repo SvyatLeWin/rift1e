@@ -1,0 +1,33 @@
+{
+    "rift1e": {
+        "attack":{
+            "none":"",
+            "fencing":"Fencing",
+            "shooting":"Shooting",
+            "aesperForce":"AesperForce"
+        },
+        "weapon":{
+            "attackWith":"AttackWith",
+            "damage":"Damage",
+            "distance":"Distance",
+            "weight":"Type",
+            "convinience":"Convinience",
+            "apiercing":"Armor piercing",
+            "flexibility":"Flexibility",
+            "power":"Power",
+            "bulky":"Bulky",
+            "fatal":"Fatal",
+            "swing":"Swing",
+            "alternative":"Alternative",
+            "reload":"Reaload",
+            "bolt":"Bolt",
+            "magazine":"Magazine",
+            "contact":"Contact",
+            "reliable":"Reliable",
+            "throwing":"Throwing",
+            "stationary":"Stationary",
+            "scratch":"Scratch",
+            "assault":"Assault"
+        }
+    }
+}
