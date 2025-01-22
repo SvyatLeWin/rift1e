@@ -22,7 +22,7 @@
                     {{/each}}
                     {{/select}}
                 </select> -->
-                <select name="data.attackWith" {{on "change" (fn this.setAttackWithValue)}}>
+                <select name="data.attackWith">
                     {{#selectOptions data.attackWith as |option|}}
                         {{#each config.attackTypes as |name type|}}
                             <option value="{{type}}">{{name}}</option>
