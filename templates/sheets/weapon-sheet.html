@@ -22,13 +22,12 @@
                     {{/each}}
                     {{/select}}
                 </select> -->
-                <select name="data.attackWith">
-                    {{#selectOptions data.attackWith}}
-                        {{#each config.attackTypes as |name type|}}
-                            <option value="{{type}}">{{name}}</option>
-                        {{/each}}
-                    {{/selectOptions}}
+                <select name="data.attackWith" value="{{data.attackWith}}">
+                    {{#each config.attackTypes as |name type|}}
+                        <option value="{{type}}">{{name}}</option>
+                    {{/each}}
                 </select>
+                
                 
             </td>
             <td>
