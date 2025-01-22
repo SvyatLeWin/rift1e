@@ -15,13 +15,21 @@
                 <th>{{localize "rift1e.weapon.flexibility"}}</th>
             </tr>
             <td>
-                <select name="data.attackWith">
+                <!-- <select name="data.attackWith">
                     {{#select data.attackWith}}
                     {{#each config.attackTypes as |name type|}}
                     <option value="{{type}}">{{name}}</option>
                     {{/each}}
                     {{/select}}
+                </select> -->
+                <select name="data.attackWith" {{on "change" (fn this.setAttackWithValue)}}>
+                    {{#selectOptions data.attackWith as |option|}}
+                        {{#each config.attackTypes as |name type|}}
+                            <option value="{{type}}">{{name}}</option>
+                        {{/each}}
+                    {{/selectOptions}}
                 </select>
+                
             </td>
             <td>
                 <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number" />
