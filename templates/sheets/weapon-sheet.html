@@ -4,7 +4,7 @@
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
     </header>
     <p>fdghdfvhd</p>
-    <!-- <div>
+    <div>
         <table>
             <tr>
                 <th>{{localize "rift1e.weapon.attackWith"}}</th>
@@ -29,6 +29,15 @@
                 <th>{{localize "rift1e.weapon.scratch"}}</th>
                 <th>{{localize "rift1e.weapon.assault"}}</th>
             </tr>
+            <td>
+                <select name="data.attackWith">
+                    {{#select data.attackWith}}
+                    {{#each config.attackTypes as |name type|}}
+                    <option value="{{type}}">{{name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </td>
         </table>
-    </div> -->
+    </div>
 </form>
