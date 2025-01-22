@@ -1,5 +1,5 @@
 import { rift1e } from "./module/config.js";
-import rift1eItemSHeet from "./module/sheets/rift1eItemSheet.js";
+import rift1eItemSHeet from "./module/sheets/Rift1eItemSheet.js";
 
 Hooks.once("init", function(){
     game.rift1e={
