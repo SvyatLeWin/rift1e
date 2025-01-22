@@ -2,7 +2,8 @@
     "Actor":{},
     "Item":{
         "types":[
-            "weapon"
+            "weapon",
+            "book"
         ],
         "templates":{
             "itemDescription":{
@@ -36,6 +37,11 @@
             "assault":0
 
 
+        },
+        "book":{
+            "templates":[
+                "itemDescription"
+            ]
         }
     }
 }
