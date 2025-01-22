@@ -16,12 +16,11 @@
             </tr>
             <td>
                 <select name="data.attackWith">
-                    <!-- {{#select data.attackWith}}
+                    {{#select data.attackWith}}
                     {{#each config.attackTypes as |name type|}}
                     <option value="{{type}}">{{name}}</option>
                     {{/each}}
-                    {{/select}} -->
-                    {{selectOptions choices selected=value localize=true}}
+                    {{/select}}
                 </select>
             </td>
             <td>
