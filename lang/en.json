@@ -28,6 +28,11 @@
             "stationary":"Stationary",
             "scratch":"Scratch",
             "assault":"Assault"
+        },
+        "weaponType":{
+            "light":"Light",
+            "medium":"Medium",
+            "heavy":"Heavy"
         }
     }
 }
