@@ -3,21 +3,17 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="16"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
         <script type="module">
-            // Измените путь на './module/config.js'
-            import { rift1e } from './module/config.js'; 
+            import { rift1e } from './module/config.js';
     
-            document.addEventListener('DOMContentLoaded', () => {
-                const select = document.getElementById('attackTypeSelect');
-                const attackTypes = rift1e.attackTypes;
-    
-                // Создаем опции для выпадающего списка
-                for (const [key, value] of Object.entries(attackTypes)) {
+            window.onload = function() {
+                const select = document.getElementById('attackTypesSelect');
+                for (const [key, value] of Object.entries(rift1e.attackTypes)) {
                     const option = document.createElement('option');
-                    option.value = key; // Используем ключ как значение
-                    option.textContent = value; // Отображаем текст
+                    option.value = key;
+                    option.textContent = value;
                     select.appendChild(option);
                 }
-            });
+            };
         </script>
     </header>
     <div>
@@ -32,7 +28,7 @@
                 <th>{{localize "rift1e.weapon.flexibility"}}</th>
             </tr>
             <td>
-                <select id="attackTypeSelect">
+                <select id="attackTypesSelect">
                     <option value="">Выберите тип атаки</option><!-- Опции будут добавлены здесь через JavaScript -->
                 </select>
                                
