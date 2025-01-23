@@ -19,13 +19,9 @@
                 <th>{{localize "rift1e.weapon.flexibility"}}</th>
             </tr>
             <td>
-                {{createSelectInput 
-                    name="data.attackWith" 
-                    options=(map (rift1e.attackTypes) (fn [type] 
-                        { "name": type.1, "value": type.0 }
-                    )) 
-                    value=data.attackWith
-                }}  
+                <select name="attackWith">
+                    {{selectOptions rift1e.attackTypes selected=rift1e.selectedAttackType localize=true}}
+                  </select>
                                
             </td>
             <td>
