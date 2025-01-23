@@ -8,7 +8,7 @@ Hooks.once("init", function(){
     //     rollItemMacro
     // },
     console.log("rift1e | Initialising Rift system");
-    // CONFIG.rift1e=rift1e;
+    CONFIG.rift1e=rift1e;
     // CONFIG.Item.documentClass = rift1eItem;
     // CONFIG.Actor.documentClass = rift1eActor;
     Items.unregisterSheet("core",ItemSheet);
