@@ -33,7 +33,9 @@
 =======
                 {{createSelectInput 
                     name="data.attackWith" 
-                    options=(map config.attackTypes (fn [type] (name type.name value type.value))) 
+                    options=(map config.attackTypes (fn [type] 
+                        { "name": type.name, "value": type.value }
+                    )) 
                     value=data.attackWith
                 }}
                 
