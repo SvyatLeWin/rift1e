@@ -23,4 +23,20 @@ export default class rift1eItemSHeet extends ItemSheet{
     //     };
     //     return sheetData;
     // }
+    
 }
+const attackTypes = {
+    none: "",
+    fencing: "rift1e.attack.fencing",
+    shooting: "rifыt1e.attack.shooting",
+    aesperForce: "rift1e.attack.aesperForce"
+};
+
+const attackOptions = Object.keys(attackTypes).map(key => {
+    return {
+        name: key, // или attackTypes[key] если хотите использовать значение
+        value: attackTypes[key]
+    };
+});
+
+this.set('attackOptions', attackOptions);
