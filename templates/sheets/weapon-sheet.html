@@ -4,9 +4,10 @@
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
         
     </header>
-    <!-- <script>
+    <script>
         import * as bcrypt from 'bcrypt';
-    </script> -->
+        import {rift1e} from "./module/config.js"
+    </script>
     <div>
         <table>
             <tr>
@@ -20,7 +21,7 @@
             </tr>
             <td>
                 <select name="attackWith">
-                    {{selectOptions rift1e.attackTypes selected=rift1e.selectedAttackType localize=true}}
+                    {{selectOptions config.attackTypes selected=config.selectedAttackType localize=true}}
                   </select>
                                
             </td>
