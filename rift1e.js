@@ -14,3 +14,6 @@ Hooks.once("init", function(){
     Items.unregisterSheet("core",ItemSheet);
     Items.registerSheet("rift1e",rift1eItemSHeet,{makeDefault: true});
 });
+Handlebars.registerHelper('object-to-array', function(obj) {
+    return Object.entries(obj);
+});
