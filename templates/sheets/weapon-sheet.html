@@ -22,6 +22,7 @@
                     {{/each}}
                     {{/select}}
                 </select> -->
+<<<<<<< HEAD
                 <select name="data.attackWith">
                     {{#selectOptions data.attackWith}}
                         {{#each config.attackTypes as |name type|}}
@@ -29,6 +30,14 @@
                         {{/each}}
                     {{/selectOptions}}
                 </select>
+=======
+                {{createSelectInput 
+                    name="data.attackWith" 
+                    options=(map config.attackTypes (fn [type] (name type.name value type.value))) 
+                    value=data.attackWith
+                }}
+                
+>>>>>>> d4efa80 (ы)
                 
             </td>
             <td>
