@@ -16,10 +16,7 @@ export default class rift1eItemSHeet extends ItemSheet{
         const baseData= super.getData();
         console.log(baseData);
         let sheetData={
-            owner:this.item.isOwner,
-            editable:this.isEditable,
-            item:baseData.item,
-            system:baseData.item.data.system,
+            ...baseData,
             config: CONFIG.rift1e
         };
         return sheetData;
