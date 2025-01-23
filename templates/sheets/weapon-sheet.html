@@ -3,10 +3,17 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="16"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
         <script>
-            import { rift1e } from "./module/config.js";
-            window.onload = function() {
+            async function loadConfig() {
+                const response = await fetch('config.js');
+                const text = await response.text();
+                eval(text); // Будьте осторожны с eval!
+                return rift1e.attackTypes;
+            }
+    
+            window.onload = async function() {
+                const attackTypes = await loadConfig();
                 const select = document.getElementById('attackTypesSelect');
-                for (const [key, value] of Object.entries(rift1e.attackTypes)) {
+                for (const [key, value] of Object.entries(attackTypes)) {
                     const option = document.createElement('option');
                     option.value = key;
                     option.textContent = value;
@@ -28,7 +35,7 @@
             </tr>
             <td>
                 <select id="attackTypesSelect">
-                    <option value="">Выберите тип атаки</option><!-- Опции будут добавлены здесь через JavaScript -->
+                    <option value="">Выберите</option><!-- Опции будут добавлены здесь через JavaScript -->
                 </select>
                                
             </td>
