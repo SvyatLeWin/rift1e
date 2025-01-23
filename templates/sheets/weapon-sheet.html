@@ -2,7 +2,23 @@
     <header class="sheet-header">
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="16"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
-        
+        <script type="module">
+            // Измените путь на './module/config.js'
+            import { rift1e } from './module/config.js'; 
+    
+            document.addEventListener('DOMContentLoaded', () => {
+                const select = document.getElementById('attackTypeSelect');
+                const attackTypes = rift1e.attackTypes;
+    
+                // Создаем опции для выпадающего списка
+                for (const [key, value] of Object.entries(attackTypes)) {
+                    const option = document.createElement('option');
+                    option.value = key; // Используем ключ как значение
+                    option.textContent = value; // Отображаем текст
+                    select.appendChild(option);
+                }
+            });
+        </script>
     </header>
     <div>
         <table>
@@ -17,7 +33,7 @@
             </tr>
             <td>
                 <select id="attackTypeSelect">
-                    <!-- Опции будут добавлены здесь через JavaScript -->
+                    <option value="">Выберите тип атаки</option><!-- Опции будут добавлены здесь через JavaScript -->
                 </select>
                                
             </td>
@@ -56,19 +72,4 @@
         <textarea name="data.sescription"{{data.descriprion}}></textarea>
     </div>
 </form>
-<script type="module">
-    import { rift1e } from "./module/config.js"; // Импортируем rift1e из config.js
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const select = document.getElementById('attackTypeSelect');
-        const attackTypes = rift1e.attackTypes;
-
-        // Создаем опции для выпадающего списка
-        for (const [key, value] of Object.entries(attackTypes)) {
-            const option = document.createElement('option');
-            option.value = value;
-            option.textContent = value || "Выберите тип атаки"; // Если значение пустое, отображаем текст
-            select.appendChild(option);
-        }
-    });
-</script>
+//
