@@ -2,23 +2,19 @@
     <header class="sheet-header">
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="16"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
-        <script>
-            async function loadConfig() {
-                const response = await fetch('config.js');
-                const text = await response.text();
-                eval(text); // Будьте осторожны с eval!
-                return rift1e.attackTypes;
-            }
+        <script type="module">
+            import { rift1e } from './module/config.js';
     
-            window.onload = async function() {
-                const attackTypes = await loadConfig();
+            window.onload = function() {
                 const select = document.getElementById('attackTypesSelect');
-                for (const [key, value] of Object.entries(attackTypes)) {
+                for (const [key, value] of Object.entries(rift1e.attackTypes)) {
                     const option = document.createElement('option');
                     option.value = key;
                     option.textContent = value;
                     select.appendChild(option);
                 }
+                // Установите предустановленный вариант
+                select.value = 'fencing'; // Замените 'fencing' на нужный вам ключ
             };
         </script>
     </header>
