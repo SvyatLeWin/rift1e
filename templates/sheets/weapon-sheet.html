@@ -2,21 +2,7 @@
     <header class="sheet-header">
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="16"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
-        <script type="module">
-            import { rift1e } from './module/config.js';
-    
-            window.onload = function() {
-                const select = document.getElementById('attackTypesSelect');
-                for (const [key, value] of Object.entries(rift1e.attackTypes)) {
-                    const option = document.createElement('option');
-                    option.value = key;
-                    option.textContent = value;
-                    select.appendChild(option);
-                }
-                // Установите предустановленный вариант
-                select.value = 'fencing'; // Замените 'fencing' на нужный вам ключ
-            };
-        </script>
+        
     </header>
     <div>
         <table>
@@ -67,7 +53,7 @@
                 <th>{{localize "rift1e.weapon.assault"}}</th>
             </tr>
         </table>
-        <textarea name="data.sescription"{{data.descriprion}}></textarea>
+        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
     </div>
 </form>
 //
