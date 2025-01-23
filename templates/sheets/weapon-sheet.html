@@ -2,9 +2,7 @@
     <header class="sheet-header">
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="16"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
-        <script type="module">
-            import { rift1e } from './module/config.js';
-    
+        <script>
             window.onload = function() {
                 const select = document.getElementById('attackTypesSelect');
                 for (const [key, value] of Object.entries(rift1e.attackTypes)) {
