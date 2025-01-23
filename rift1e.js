@@ -1,4 +1,4 @@
-import { rift1e } from "rift1e/module/config.js";
+import { rift1e } from "./module/config.js";
 import rift1eItemSHeet from "./module/sheets/rift1eItemSheet.js";
 
 Hooks.once("init", function(){
