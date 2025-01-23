@@ -63,6 +63,7 @@
                 <th>{{localize "rift1e.weapon.assault"}}</th>
             </tr>
         </table>
-        <textarea name="data.sescription"{{data.descriprion}}></textarea>
+        <!-- <textarea name="data.sescription"{{data.descriprion}}></textarea> -->
+         {{editor content=data.descriprion target="data.descriprion" button=true owner=owner editable=editable}}
     </div>
 </form>
