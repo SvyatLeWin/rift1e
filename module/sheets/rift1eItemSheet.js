@@ -19,7 +19,7 @@ export default class rift1eItemSHeet extends ItemSheet{
             owner:this.item.isOwner,
             editable:this.isEditable,
             item:baseData.item,
-            data:baseData.item.data,
+            data:baseData.item.data.system,
             config: CONFIG.rift1e
         };
         return sheetData;
