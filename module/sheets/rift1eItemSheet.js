@@ -14,11 +14,12 @@ export default class rift1eItemSHeet extends ItemSheet{
     }
     getData(){
         const baseData= super.getData();
+        console.log(baseData);
         let sheetData={
             owner:this.item.isOwner,
             editable:this.isEditable,
             item:baseData.item,
-            data:baseData.item.data.data,
+            data:baseData.item.data,
             config: CONFIG.rift1e
         };
         return sheetData;
