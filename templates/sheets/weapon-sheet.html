@@ -19,13 +19,13 @@
                 <th>{{localize "rift1e.weapon.flexibility"}}</th>
             </tr>
             <td>
-                <select name="data.attackWith">
-                    {{#select data.attackWith}}
-                    {{#each config.attackTypes as |name type|}}
-                    <option value="{{type}}">{{name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>     
+                {{createSelectInput 
+                    name="data.attackWith" 
+                    options=(map (rift1e.attackTypes) (fn [type] 
+                        { "name": type.1, "value": type.0 }
+                    )) 
+                    value=data.attackWith
+                }}  
                                
             </td>
             <td>
