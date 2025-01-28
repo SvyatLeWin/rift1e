@@ -1,8 +1,8 @@
 export default class rift1eItemSHeet extends ItemSheet{
     static get defaultOptions(){
-        return mergeObject(super.defaultOptions,{
-            width: 530,
-            height: 340,
+        return foundry.utils.mergeObject(super.defaultOptions,{
+            width: 640,
+            height: 480,
             classes:["rift1e","sheet","item"]
             });
         
