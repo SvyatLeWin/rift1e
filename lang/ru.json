@@ -28,6 +28,11 @@
             "stationary":"Стационарное",
             "scratch":"Царапина",
             "assault":"Штурмовое"
+        },
+        "weaponType":{
+            "light":"Легкое",
+            "medium":"Среднее",
+            "heavy":"Тяжелое"
         }
     }
 }
